@@ -12,7 +12,7 @@ class Solution {
 public:
     void reorderList(ListNode* head) {
         ListNode* pointer=head;
-        while (pointer->next != NULL)
+        while (pointer->next != 0)
         {
             ListNode* nextItem=pointer->next;
             // get the last element
@@ -26,13 +26,13 @@ public:
     }
     ListNode* getLastElementAndRemove(ListNode* head){
         ListNode *pointer=head;
-        ListNode *prevPointer=NULL;
-        while(pointer->next!=NULL){
+        ListNode *prevPointer= 0 ;
+        while(pointer->next!=0){
             prevPointer=pointer;
             pointer=pointer->next;
         }
-        if(prevPointer!=NULL){
-            prevPointer->next=NULL;
+        if(prevPointer!=nullptr){
+            prevPointer->next=0;
         }
         return pointer;
     }
